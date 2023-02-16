@@ -31,16 +31,7 @@
             <!-- Side widgets-->
             <div class="col-lg-4">
                 <!-- Search widget-->
-                <div class="card mb-4">
-                    <div class="card-header">Search</div>
-                    <div class="card-body">
-                        <div class="input-group">
-                            <input class="form-control" type="text" placeholder="Enter search term..."
-                                aria-label="Enter search term..." aria-describedby="button-search" />
-                            <button class="btn btn-danger" id="button-search" type="button">Go!</button>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- Categories widget-->
                 <div class="card mb-4">
                     <div class="card-header">Categories</div>
@@ -49,7 +40,7 @@
                             <div class="col-12">
                                 <ul class="list-unstyled mb-0 d-flex justify-content-between flex-wrap">
                                     @foreach ($categories as $category)
-                                    <li><a href="#!" class="mx-1">{{$category->category_name}}</a></li>
+                                    <li><a href="read/category/post/{{$category->id}}" class="mx-1">{{$category->category_name}}</a></li>
                                     @endforeach
                                 </ul>
                             </div>

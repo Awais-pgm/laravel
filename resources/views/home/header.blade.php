@@ -35,9 +35,9 @@
                         <a class="nav-link" href="/show/orders">Order</a>
                     </li>
                     <li class="nav-item {{ Request::is('showCart') ? 'active' : '' }}">
-                        <span class="badge bg-danger text-light"></span>
-                        <a class="nav-link {{ Request::is('showCart') ? 'bg-danger' : '' }}" href="{{ url('showCart') }}">
-                            <img src="/assets/images/cart.svg" alt="" style="width:25px">
+                        <span class="badge text-light"></span>
+                        <a class="nav-link {{ Request::is('showCart') ? 'active' : '' }}" href="{{ url('showCart') }}">
+                            <i class="fa-solid fa-cart-shopping"></i>
                         </a>
                     </li>
 

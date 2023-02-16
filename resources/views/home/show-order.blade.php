@@ -54,7 +54,7 @@
         </table>
     </div>
     @else
-    <h2 class="text-center">No orders have been placed. Add some.</h2>
+    <p class="text-center">No orders have been placed. Add some.</p>
     <div class="container">
         <hr class="bg-danger">
     </div>

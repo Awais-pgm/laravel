@@ -1,13 +1,13 @@
 @extends('home.app')
 @push('title')
-    <title>Blog</title>
+    <title>Blog Categories</title>
 @endpush
 @section('content')
     <header class="py-5 bg-light border-bottom mb-4">
         <div class="container">
             <div class="text-center my-5">
-                <h1 class="fw-bolder">Welcome to Blog Home!</h1>
-                <p class="lead mb-0">Here You can read all about our posts.</p>
+                <h1 class="fw-bolder">Blog Categories > <small>{{$catName->category_name}}</small></h1>
+                <p class="lead mb-0">Here You can explore categories.</p>
             </div>
         </div>
     </header>
@@ -17,8 +17,9 @@
             <!-- Blog entries-->
             <div class="col-lg-8">
                 <!-- Featured blog post-->
+                @if($featurePost != 'NULL')
                 <div class="card mb-4" style="">
-                    <a href="#!"><img class="card-img-top" src="blog-post-images/{{$featurePost->post_image}}"
+                    <a href="/read/blog/post/{{ $featurePost->id }}"><img class="card-img-top" src="blog-post-images/{{$featurePost->post_image}}"
                             alt="..." style="height:350px;object-fit:cover;"/></a>
                     <div class="card-body">
                         <div class="small text-muted">{{ $featurePost->created_at->diffForHumans() }}</div>
@@ -27,6 +28,7 @@
                         <a class="btn btn-danger" href="/read/blog/post/{{ $featurePost->id }}">Read more →</a>
                     </div>
                 </div>
+                @endif
                 <!-- Nested row for non-featured blog posts-->
                 <div class="row">
                     <div class="d-flex flex-wrap">
@@ -34,7 +36,7 @@
                         @foreach ($posts as $post)
                             <div class="col-6 " >
                                 <div class="card mb-4" style="width:350px;">
-                                    <a href="#!">
+                                    <a href="/read/blog/post/{{ $post->id }}">
                                         <img class="card-img-top"
                                             src="/blog-post-images/{{ $post->post_image }}  " alt="{{ $post->post_image }}" style="height:300px;object-fit:cover;"/></a>
                                     <div class="card-body">

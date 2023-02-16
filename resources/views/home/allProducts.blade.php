@@ -14,7 +14,7 @@
             <div class="row">
                 {{-- @if (count($products > 0)) --}}
                     @foreach ($products as $product)
-                        <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="col-sm-6 col-md-5 col-lg-3">
                             <div class="box">
                                 <div class="option_container">
                                     <div class="options">
@@ -30,6 +30,7 @@
                                     <h5 class="text-danger">
                                         {{ $product->title }}
                                     </h5>
+                                    <small>Availability: @if($product->quantity != 0) <span class="badge bg-success text-light"> In-Stock</span> @else <span class="badge bg-danger text-light">sold</span>   @endif</small>
                                     <div class="@if ($product->discount_price != null) @else
                                         u-hide-price @endif
                                        u-old-price"

@@ -15,6 +15,8 @@ use App\Models\User;
 use App\Models\Comment;
 use App\Models\Reply;
 use App\Models\SliderDetails;
+use App\Models\ContactUs;
+
 class HomeController extends Controller
 {
 
@@ -23,7 +25,7 @@ class HomeController extends Controller
         $slider = SliderDetails::find(1);
         $categories = Categories::all();
         $products = Products::paginate(8);
-        $data = compact('products', 'categories','slider');
+        $data = compact('products', 'categories', 'slider');
         return view('home.userpage')->with($data);
     }
     // redirect a user if user is admin or normal user
@@ -64,10 +66,10 @@ class HomeController extends Controller
     // show product details
     public function productDetails($product_id)
     {
-        $comments = Comment::where('product_id', '=' , $product_id)->get();
+        $comments = Comment::where('product_id', '=', $product_id)->get();
         $replies = Reply::all();
         $productDetails = Products::find($product_id);
-        $data = compact('productDetails','comments','replies');
+        $data = compact('productDetails', 'comments', 'replies');
         return view('home.productDetails')->with($data);
     }
     // add to cart
@@ -117,7 +119,6 @@ class HomeController extends Controller
                     Alert::success('Product quantity has been updated');
                     $cart->save();
                     return redirect()->back();
-                    die;
                 }
             }
             Alert::success('Product into cart has been added successfully.');
@@ -209,6 +210,12 @@ class HomeController extends Controller
             // deleting cart products
             Cart::where('user_id', '=', $userId)->delete();
         }
+        foreach ($productsInCart as $productInCart) {
+            $productid = $productInCart->product_id;
+            $product = Products::find($productid);
+            $product->quantity = $product->quantity - $productInCart->product_quantity;
+            $product->save();
+        }
         Alert::success('Success', 'Your Order has been submitted successfully.');
         return redirect('/showAllProducts');
     }
@@ -235,29 +242,38 @@ class HomeController extends Controller
         $data = compact('orderData', 'userData');
         return View('home.online-payment')->with($data);
     }
-    public function showOrders(){
+    public function showOrders()
+    {
         if (!Auth::id()) {
             Alert::error('Error', 'You must login.');
             return redirect()->back();
         }
-        if(Auth::user()->id){
+        if (Auth::user()->id) {
             $userId = Auth::user()->id;
             $products = Products::paginate(16);
             $orders = Order::where('user_id', $userId)->get();
-            $data = compact('orders','products');
+            $data = compact('orders', 'products');
             return view('home.show-order')->with($data);
         }
-        
     }
-    public function cancelOrder($id){
+    public function cancelOrder($id)
+    {
+        $order = Order::where('id','=', $id)->get();
+        foreach ($order as $order) {
+            $productid = $order->product_id;
+            $product = Products::find($productid);
+            $product->quantity = $product->quantity + $order->product_quantity;
+            $product->save();
+        }
         Order::where('id', $id)->delete();
-        Alert::success('success','Order cancelled successfully');
+        Alert::success('success', 'Order cancelled successfully');
         return redirect()->back();
     }
     // comment and reply section
-    public function addComment(Request $request,$product_id){
-        if(!Auth::id()){
-            Alert::error('error','You Must be logged in to comment');
+    public function addComment(Request $request, $product_id)
+    {
+        if (!Auth::id()) {
+            Alert::error('error', 'You Must be logged in to comment');
             return redirect()->back();
         }
         $request->validate([
@@ -269,13 +285,13 @@ class HomeController extends Controller
         $newComment->comment = $request->comment;
         $newComment->product_id = $product_id;
         $newComment->save();
-        Alert::success('success','Comment created successfully');
+        Alert::success('success', 'Comment created successfully');
         return redirect()->back();
-
     }
-    public function replyOfComment(Request $request){
-        if(!Auth::id()){
-            Alert::error('error','You must be logged in to reply');
+    public function replyOfComment(Request $request)
+    {
+        if (!Auth::id()) {
+            Alert::error('error', 'You must be logged in to reply');
             return redirect()->back();
         }
         $request->validate([
@@ -290,19 +306,55 @@ class HomeController extends Controller
         return redirect()->back();
     }
     // blog section
-    public function showBlog(){
+    public function showBlog()
+    {
         $postsCount = BlogPosts::all()->count();
-        $rand = rand(1,$postsCount);
+        $rand = rand(1, $postsCount);
         $featurePost = BlogPosts::find($rand);
         $posts = BlogPosts::paginate(4);
         $categories = BlogCategories::all();
-        $data = compact('posts','featurePost','categories');
+        $data = compact('posts', 'featurePost', 'categories');
         return view('home.blog-posts')->with($data);
     }
-    public function readPost($id){
+    public function readPost($id)
+    {
         $categories = BlogCategories::all();
         $post = BlogPosts::find($id);
-        $data = compact('post','categories');
+        $data = compact('post', 'categories');
         return view('home.read-post')->with($data);
+    }
+    public function readCategoryPost($id)
+    {
+        $featurePost = 'NULL';
+        $posts = BlogPosts::where('category_id', '=', $id)->paginate(4);
+        foreach ($posts as $post) {
+            $featurePost = BlogPosts::find($post->id);
+            break;
+        }
+        $categories = BlogCategories::all();
+        $catName = BlogCategories::find($id);
+        $data = compact('posts', 'featurePost', 'categories', 'catName');
+        return view('home.category-posts')->with($data);
+    }
+    public function contactUs()
+    {
+        return view('home.contact-us');
+    }
+    public function saveContactUs(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'subject' => 'required',
+            'message' => 'required',
+        ]);
+        $contact = new contactUs;
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->subject = $request->subject;
+        $contact->message = $request->message;
+        $contact->save();
+        Alert::success('success', 'Message sent successfully');
+        return redirect('/');
     }
 }

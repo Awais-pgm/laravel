@@ -10,12 +10,14 @@ use App\Models\User;
 use Alert;
 use App\Models\BlogCategories;
 use App\Models\BlogPosts;
+use App\Models\ContactUs;
 use App\Notifications\EcomNotification;
 use Notification;
 use PDF;
 use App\Models\SliderDetails;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
 
 class AdminController extends Controller
@@ -416,6 +418,71 @@ class AdminController extends Controller
         $newPost->category_id = $request->category;
         $newPost->save();
         Alert::success('success', 'post created successfully.');
+        return redirect()->back();
+    }
+    public function showAllPosts()
+    {
+        $posts = BlogPosts::all();
+        $data = compact('posts');
+        return view('admin.all-blog-posts')->with($data);
+    }
+    public function editPost($id)
+    {
+        $blogCats = BlogCategories::all();
+        $post = BlogPosts::find($id);
+        $data = compact('post', 'blogCats');
+        return view('admin.update-post')->with($data);
+    }
+    public function updatePost(Request $request, $id)
+    {
+        $request->validate([
+            'title' => 'required',
+            'category' => 'required',
+            'description' => 'required',
+        ]);
+
+        $updtePost = BlogPosts::find($id);
+        $postImage = $updtePost->post_image;
+        if ($request->image) {
+            unlink('blog-post-images/' . $postImage);
+            $fileNameWithExtention = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExtention, PATHINFO_FILENAME);
+            $fileExtention = $request->file('image')->getClientOriginalExtension();
+            $fileNameToStore = $fileName . '_' . time() . '.' . $fileExtention;
+            $request->image->move(public_path('blog-post-images/'), $fileNameToStore);
+            $updtePost->post_image = $fileNameToStore;
+        }
+        else{
+            $updtePost->post_image = $postImage;
+        }
+        $updtePost->post_title = $request->title;
+        $updtePost->post_description = $request->description;
+        $updtePost->category_id = $request->category;
+        $updtePost->save();
+        Alert::success('success', 'post updated successfully.');
+        return redirect('/edit/blog/post/' . $id);
+    }
+    public function deletePost($id){
+        $post = BlogPosts::find($id);
+        $post->delete();
+        Alert::success('success', 'post deleted successfully.');
+        return redirect()->back();
+    }
+    //  message section
+    public function checkMessages(){
+        $messages = ContactUs::all();
+        $data = compact('messages');
+        return view('admin.check-messages')->with($data);
+    }
+    public function readMessage($id){
+        $message = ContactUs::find($id);
+        $data = compact('message');
+        return view('admin.read-more-message')->with($data);
+    }
+    public function deleteMessage($id){
+        $message = ContactUs::find($id);
+        $message->delete();
+        Alert::success('success','Message deleted successfully.');
         return redirect()->back();
     }
 }

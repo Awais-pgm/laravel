@@ -7,6 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Alert;
+use App\Models\Products;
 class StripeController extends Controller
 {
     public function makePayment(Request $request)
@@ -62,6 +63,12 @@ class StripeController extends Controller
                 $totalAmount = 0;
                 // deleting cart products
                 Cart::where('user_id', '=', $userId)->delete();
+            }
+            foreach ($productsInCart as $productInCart) {
+                $productid = $productInCart->product_id;
+                $product = Products::find($productid);
+                $product->quantity =$product->quantity - $productInCart->product_quantity;
+                $product->save();
             }
             Alert::success('success','Thanks for payment.');
             return redirect('/');

@@ -53,6 +53,10 @@ Route::controller(HomeController::class)->group(function () {
     //<--------- User Side blog section ---------->
     Route::get('/show/blog', 'showBlog');
     Route::get('/read/blog/post/{id}', 'readPost');
+    Route::get('/read/category/post/{id}', 'readCategoryPost');
+    // contact us section
+    Route::get('contact/us' , 'contactUs');
+    Route::post('save/contact/us' , 'saveContactUs');
     
 });
 
@@ -95,6 +99,14 @@ Route::controller(AdminController::class)->group(function () {
     Route::post('/save/blog/category', 'saveCategory')->name('save.blog.category');
     Route::get('/create/blog/post', 'createPost')->name('create.blog.post');
     Route::post('/save/blog/post', 'savePost')->name('save.blog.post');
+    Route::get('/show/all/posts', 'showAllPosts')->name('show.all.posts');
+    Route::get('/edit/blog/post/{id}', 'editPost');
+    Route::post('/update/blog/post/{id}', 'updatePost');
+    Route::get('delete/blog/post/{id}', 'deletePost');
+    // contact us messages
+    Route::get('check/messages','checkMessages');
+    Route::get('read/more/{id}','readMessage');
+    Route::get('delete/message/{id}','deleteMessage');
 });
 
 Route::controller(StripeController::class)->group(function () {
