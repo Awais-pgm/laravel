@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StripeController;
@@ -121,5 +122,9 @@ Route::controller(AdminController::class)->group(function () {
 
 Route::controller(StripeController::class)->group(function () {
     Route::post('/make/payment', 'makePayment');
+});
+Route::controller(GoogleController::class)->group(function () {
+    Route::get('auth/google', 'googlePage');
+    Route::get('auth/google/callback', 'googleCallback');
 });
 
