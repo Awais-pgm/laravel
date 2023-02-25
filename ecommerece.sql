@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2023 at 04:18 PM
+-- Generation Time: Feb 25, 2023 at 03:36 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -67,8 +67,9 @@ CREATE TABLE `blog_posts` (
 --
 
 INSERT INTO `blog_posts` (`id`, `post_title`, `post_description`, `post_image`, `category_id`, `created_at`, `updated_at`) VALUES
-(1, 'Nike Shoes', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia fuga commodi illum exercitationem vero obcaecati assumenda facilis provident rem, cum fugit, consequuntur, odio voluptatem tempora maxime! Consequuntur, alias facilis. Numquam.\r\nFacere necessitatibus quibusdam at ipsum. Culpa ut quibusdam ullam dignissimos voluptates numquam natus odio. Modi animi provident rerum fugit quas autem voluptatibus harum, obcaecati ad quo ut iste aspernatur totam.\r\nDolorem magni eligendi pariatur inventore. Dolore quibusdam eos quidem quod, sed repudiandae doloremque aperiam corrupti dolorum. Architecto reprehenderit similique magni dolorem nam, quasi accusantium eligendi iusto odit ipsum ullam hic!\r\nDucimus eos asperiores consequatur commodi veniam quae inventore ratione obcaecati repellendus exercitationem libero perspiciatis nam repellat, vel laboriosam facere possimus quasi qui aperiam veritatis doloremque! Consequuntur excepturi obcaecati suscipit ullam.\r\nConsequuntur inventore, fugit ullam pariatur ipsum quasi cumque. Et tenetur dolores officia, error rerum unde esse deleniti, fugiat asperiores voluptatum quasi. Fuga ipsam dolorum itaque architecto mollitia, et dolorem deserunt.\r\nConsequuntur, aperiam perspiciatis mollitia sunt recusandae eaque repellendus dignissimos et ullam quisquam. Autem inventore sint fuga nobis illum dolores eligendi, saepe placeat at deleniti ducimus qui cupiditate, dicta explicabo rerum.\r\nDolorum ea repellendus ex voluptate reprehenderit, sit dolore aliquam deleniti qui veniam blanditiis iusto, reiciendis, quaerat laboriosam! Totam, laborum? Numquam ex itaque dicta nobis cupiditate earum voluptatibus voluptatem repudiandae quisquam.\r\nSunt in suscipit eligendi? Excepturi dignissimos provident recusandae explicabo ex vitae dolor tempora, veniam eos consequuntur unde eaque perspiciatis. Minima iste pariatur, maxime natus nemo commodi nihil doloremque illum animi.\r\nRerum corporis animi cupiditate fugit voluptatum necessitatibus, est, perferendis qui laudantium molestias deserunt totam. Hic voluptate suscipit laboriosam at sed! Animi laudantium assumenda quia corrupti laboriosam aut repellendus fugit porro!\r\nIpsa, eligendi voluptates! Consequuntur quidem aperiam quod nam impedit delectus repudiandae, maiores repellendus eaque, nulla nesciunt possimus officiis dolorem nemo officia. Totam earum nesciunt libero beatae perferendis temporibus eaque accusamus!', 'shoes2_1676540183.jpg', '2', '2023-02-15 11:04:06', '2023-02-16 04:36:23'),
-(4, 'Camera', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis ratione nesciunt adipisci repellat illo doloremque? Nulla rem, similique recusandae voluptatum quam ducimus perferendis corrupti tenetur quibusdam suscipit eius delectus?\nAut, dolorum enim laboriosam nobis officia illum beatae error maiores iure odio sunt accusamus tempora? Veniam dolorum numquam ducimus neque id dolores fuga, animi cumque rerum rem consectetur inventore perspiciatis?\nVeniam iste assumenda temporibus odit illum unde nesciunt, accusamus consequuntur cumque voluptas eveniet corporis inventore ea atque a architecto dolorum, ratione recusandae tenetur quibusdam saepe? Assumenda in incidunt labore excepturi.\nAperiam facere commodi labore harum voluptas illum ipsa culpa excepturi asperiores cum, aut veniam. Sapiente necessitatibus laborum modi ipsa temporibus, dolore provident dicta sed pariatur obcaecati reiciendis assumenda ea deleniti.\nNemo rem cumque, ipsam, ad iure, voluptatibus vel officiis magnam dicta adipisci ea est. Excepturi natus culpa earum aspernatur, quae iste possimus maiores voluptates in consequuntur voluptate necessitatibus eos pariatur!\nQuasi delectus a voluptatem sit, architecto molestiae veritatis esse soluta nemo nulla deserunt quisquam harum libero saepe possimus aspernatur velit fuga facere officia eius sequi temporibus, doloribus culpa fugiat. Repellendus?\nArchitecto natus error amet! Quibusdam beatae labore officia architecto temporibus voluptatem, doloremque, corrupti eligendi impedit deleniti odit eaque rerum dolor deserunt repellendus, iure natus? Accusantium suscipit natus necessitatibus illo eveniet.\nSequi delectus beatae iusto dignissimos nemo consequatur tempora harum voluptas quisquam, cumque iure odio reprehenderit quis maxime ducimus dolores commodi a distinctio autem earum at! Quae, veritatis. Esse, vero repudiandae.\nDeserunt vero amet facere deleniti similique consectetur labore est minus quasi assumenda aut atque sit nesciunt veniam obcaecati praesentium, provident voluptatibus exercitationem! Nostrum ex voluptatem tempora ipsa doloremque dolore sequi.\nMollitia, id iusto maiores inventore maxime, esse reiciendis hic nostrum est quod vel assumenda odit soluta. Aperiam est alias minus pariatur fugit quasi illo! Sed, quasi aperiam. Unde, facilis beatae.', 'cam1_1676481307.jpg', '5', '2023-02-15 12:15:07', '2023-02-15 12:15:07');
+(4, 'Camera', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis ratione nesciunt adipisci repellat illo doloremque? Nulla rem, similique recusandae voluptatum quam ducimus perferendis corrupti tenetur quibusdam suscipit eius delectus?\nAut, dolorum enim laboriosam nobis officia illum beatae error maiores iure odio sunt accusamus tempora? Veniam dolorum numquam ducimus neque id dolores fuga, animi cumque rerum rem consectetur inventore perspiciatis?\nVeniam iste assumenda temporibus odit illum unde nesciunt, accusamus consequuntur cumque voluptas eveniet corporis inventore ea atque a architecto dolorum, ratione recusandae tenetur quibusdam saepe? Assumenda in incidunt labore excepturi.\nAperiam facere commodi labore harum voluptas illum ipsa culpa excepturi asperiores cum, aut veniam. Sapiente necessitatibus laborum modi ipsa temporibus, dolore provident dicta sed pariatur obcaecati reiciendis assumenda ea deleniti.\nNemo rem cumque, ipsam, ad iure, voluptatibus vel officiis magnam dicta adipisci ea est. Excepturi natus culpa earum aspernatur, quae iste possimus maiores voluptates in consequuntur voluptate necessitatibus eos pariatur!\nQuasi delectus a voluptatem sit, architecto molestiae veritatis esse soluta nemo nulla deserunt quisquam harum libero saepe possimus aspernatur velit fuga facere officia eius sequi temporibus, doloribus culpa fugiat. Repellendus?\nArchitecto natus error amet! Quibusdam beatae labore officia architecto temporibus voluptatem, doloremque, corrupti eligendi impedit deleniti odit eaque rerum dolor deserunt repellendus, iure natus? Accusantium suscipit natus necessitatibus illo eveniet.\nSequi delectus beatae iusto dignissimos nemo consequatur tempora harum voluptas quisquam, cumque iure odio reprehenderit quis maxime ducimus dolores commodi a distinctio autem earum at! Quae, veritatis. Esse, vero repudiandae.\nDeserunt vero amet facere deleniti similique consectetur labore est minus quasi assumenda aut atque sit nesciunt veniam obcaecati praesentium, provident voluptatibus exercitationem! Nostrum ex voluptatem tempora ipsa doloremque dolore sequi.\nMollitia, id iusto maiores inventore maxime, esse reiciendis hic nostrum est quod vel assumenda odit soluta. Aperiam est alias minus pariatur fugit quasi illo! Sed, quasi aperiam. Unde, facilis beatae.', 'cam1_1676481307.jpg', '5', '2023-02-15 12:15:07', '2023-02-15 12:15:07'),
+(7, 'shoes', 'lorem ipsum', 'shoes2_1676572953.jpg', '2', '2023-02-16 13:42:33', '2023-02-16 13:42:33'),
+(8, 'shirt', 'death', 'death-6054627_1676573744.jpg', '1', '2023-02-16 13:55:44', '2023-02-16 13:55:44');
 
 -- --------------------------------------------------------
 
@@ -113,7 +114,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category`, `created_at`, `updated_at`, `deleted_at`, `image`, `description`) VALUES
-(1, 'cameras', '2023-02-03 09:01:11', '2023-02-03 09:01:11', NULL, 'cam1_1675432871.jpg', 'This category holds all the cameras'),
+(1, 'cameras', '2023-02-03 09:01:11', '2023-02-24 02:16:27', NULL, 'cam1_1675432871.jpg', 'This category holds all the cameras'),
 (2, 'Watches', '2023-02-03 09:01:37', '2023-02-03 09:01:37', NULL, 'watch_1675432897.jpg', 'this category holds all the watches'),
 (3, 'Glasses', '2023-02-03 09:02:01', '2023-02-03 09:02:01', NULL, 'glasses_1675432921.jpg', 'This category holds all the glasses'),
 (4, 'Shoes', '2023-02-03 09:02:23', '2023-02-03 09:02:23', NULL, 'shoes2_1675432943.jpg', 'This category holds all the shoes.'),
@@ -215,7 +216,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (30, '2023_02_15_110112_create_slider_details_table', 10),
 (31, '2023_02_15_132125_create_blog_categories_table', 11),
 (32, '2023_02_15_132138_create_blog_posts_table', 11),
-(33, '2023_02_16_105338_create_contact_us_table', 12);
+(33, '2023_02_16_105338_create_contact_us_table', 12),
+(38, '2023_02_20_110453_create_testimonials_table', 13);
 
 -- --------------------------------------------------------
 
@@ -259,6 +261,13 @@ CREATE TABLE `orders` (
   `total_price` varchar(255) DEFAULT NULL,
   `payment_method` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_name`, `user_id`, `user_email`, `user_mobile_no`, `user_address`, `product_name`, `product_id`, `product_quantity`, `product_price`, `product_image`, `delivery_status`, `payment_status`, `created_at`, `updated_at`, `total_price`, `payment_method`) VALUES
+(87, 'Muhammad Awais', '5', 'wsiwjiaw@gmail.com', '03007926926', 'Basti roshan din', 'watch', '3', '1', '2300', 'watch_1675433807.jpg', 'processing', 'pending', '2023-02-24 02:17:27', '2023-02-24 02:17:27', '2300', 'COD');
 
 -- --------------------------------------------------------
 
@@ -317,9 +326,9 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `description`, `image`, `price`, `quantity`, `categories_id`, `discount_price`, `created_at`, `updated_at`, `category_name`, `deleted_at`) VALUES
-(1, 'Lipstick', 'Red lipstick, Medora', 'lipstick_1675433574.jpg', '600', 54, '6', '300', '2023-02-03 09:12:54', '2023-02-16 08:36:38', 'Beauty', NULL),
+(1, 'Lipstick', 'Red lipstick, Medora', 'lipstick_1675433574.jpg', '600', 54, '6', '300', '2023-02-03 09:12:54', '2023-02-24 02:16:35', 'Beauty', NULL),
 (2, 'watch', 'descent watch with white color', 'watch1_1675433744.jpg', '4500', 19, '2', NULL, '2023-02-03 09:15:44', '2023-02-16 09:19:50', 'Watches', NULL),
-(3, 'watch', 'this is another watch', 'watch_1675433807.jpg', '2300', 9, '2', NULL, '2023-02-03 09:16:47', '2023-02-16 08:57:19', 'Watches', NULL),
+(3, 'watch', 'this is another watch', 'watch_1675433807.jpg', '2300', 8, '2', NULL, '2023-02-03 09:16:47', '2023-02-24 02:17:27', 'Watches', NULL),
 (4, 'Camera', 'sony camera', 'cam1_1675433839.jpg', '6700', 34, '1', NULL, '2023-02-03 09:17:19', '2023-02-03 09:17:19', 'cameras', NULL),
 (5, 'camera', 'camera with flash', 'cam2_1675433875.jpg', '6500', 0, '1', NULL, '2023-02-03 09:17:55', '2023-02-03 09:17:55', 'cameras', NULL),
 (6, 'shoes', 'very nice shoes', 'shoes2_1675433922.jpg', '7600', 54, '4', NULL, '2023-02-03 09:18:42', '2023-02-03 09:18:42', 'Shoes', NULL),
@@ -362,7 +371,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('B3NpseMIGpbTBiLPmElaUZPPATaZtnHsueTg1fQQ', 5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoicVRTdmVVTk1zcnVCWEVZdVNlcXZFOHI2TTVFdzlTVUdGZDg0UEF1NSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzY6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9zbGlkZXIvaGFuZGxlciI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjU7czo1OiJhbGVydCI7YTowOnt9fQ==', 1676558062);
+('dbh4dhTTUvxCnp5MardxhNUicJyD9yVn29nDgtFK', 5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidzRsck9YY3pIQlg1aUJXbmVSalpkMXlldFQzTGNhUGFsY2NCWkp0ZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC92aWV3L2FsbC9vcmRlcnMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo1O3M6NToiYWxlcnQiO2E6MDp7fX0=', 1677223153);
 
 -- --------------------------------------------------------
 
@@ -425,6 +434,31 @@ CREATE TABLE `subscription_items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `designation` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `detail` longtext DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `designation`, `name`, `detail`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'CEO', 'Muhammad Awais', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore ut rerum itaque asperiores dolorum nulla. Ad, dolor doloribus facere architecto, sed voluptatem, quam ipsum beatae odit blanditiis reprehenderit obcaecati.', 'IMG_4761_1676900586.jpg', NULL, '2023-02-20 08:43:06'),
+(2, 'Cheif Exucetiv', 'Ali Haider', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'IMG_4761_1676913051.jpg', '2023-02-20 12:10:51', '2023-02-20 12:10:51'),
+(3, 'Manager', 'Muhammad Junaid', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'IMG_4761_1676914987.jpg', '2023-02-20 12:43:07', '2023-02-20 12:43:07');
 
 -- --------------------------------------------------------
 
@@ -588,6 +622,12 @@ ALTER TABLE `subscription_items`
   ADD UNIQUE KEY `subscription_items_stripe_id_unique` (`stripe_id`);
 
 --
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -609,13 +649,13 @@ ALTER TABLE `blog_categories`
 -- AUTO_INCREMENT for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -645,13 +685,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=87;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -688,6 +728,12 @@ ALTER TABLE `subscriptions`
 --
 ALTER TABLE `subscription_items`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
