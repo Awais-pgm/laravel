@@ -16,17 +16,27 @@ use App\Models\Comment;
 use App\Models\Reply;
 use App\Models\SliderDetails;
 use App\Models\ContactUs;
+use App\Models\Testimonial;
 
 class HomeController extends Controller
 {
 
-    public function index()
+    public function index(Request $request)
     {
+        $query = $request['query'] ?? "";
+        if(!$query == ''){
+            $products = Products::where('title','LIKE',"%$query%")->orwhere('description','LIKE',"%$query%")->paginate(8);
+        }
+        else{
+            $products = Products::paginate(8);
+        }
         $slider = SliderDetails::find(1);
         $categories = Categories::all();
-        $products = Products::paginate(8);
-        $data = compact('products', 'categories', 'slider');
+        $testimonials = Testimonial::all();
+        $dummy = 'Assalam o Alikum';
+        $data = compact('products', 'categories', 'slider','query','testimonials','dummy');
         return view('home.userpage')->with($data);
+        
     }
     // redirect a user if user is admin or normal user
     public function redirect()
@@ -308,9 +318,12 @@ class HomeController extends Controller
     // blog section
     public function showBlog()
     {
-        $postsCount = BlogPosts::all()->count();
-        $rand = rand(1, $postsCount);
-        $featurePost = BlogPosts::find($rand);
+        // $allPosts = BlogPosts::all();
+        // foreach($allPosts as $singlePostid){
+        //     $id = $singlePostid->id;
+        //     $featurePost = BlogPosts::find($id);
+        // }
+        $featurePost = BlogPosts::inRandomOrder()->limit(5)->first();
         $posts = BlogPosts::paginate(4);
         $categories = BlogCategories::all();
         $data = compact('posts', 'featurePost', 'categories');

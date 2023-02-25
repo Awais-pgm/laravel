@@ -17,8 +17,8 @@
             <!-- Blog entries-->
             <div class="col-lg-8">
                 <!-- Featured blog post-->
-                <div class="card mb-4" style="">
-                    <a href="#!"><img class="card-img-top" src="blog-post-images/{{$featurePost->post_image}}"
+                <div class="card mb-4 p-3" style="">
+                    <a href="/read/blog/post/{{ $featurePost->id }}"><img class="card-img-top" src="blog-post-images/{{$featurePost->post_image}}"
                             alt="..." style="height:350px;object-fit:cover;"/></a>
                     <div class="card-body">
                         <div class="small text-muted">{{ $featurePost->created_at->diffForHumans() }}</div>
@@ -33,8 +33,8 @@
                         <!-- Blog post-->
                         @foreach ($posts as $post)
                             <div class="col-6 " >
-                                <div class="card mb-4" style="width:350px;">
-                                    <a href="#!">
+                                <div class="card mb-4 p-3" style="width:350px;">
+                                    <a href="/read/blog/post/{{ $featurePost->id }}">
                                         <img class="card-img-top"
                                             src="/blog-post-images/{{ $post->post_image }}  " alt="{{ $post->post_image }}" style="height:300px;object-fit:cover;"/></a>
                                     <div class="card-body">

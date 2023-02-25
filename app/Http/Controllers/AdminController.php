@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Categories;
 use App\Models\Order;
 use App\Models\Products;
-use App\Models\User;
 use Alert;
 use App\Models\BlogCategories;
 use App\Models\BlogPosts;
@@ -15,10 +14,10 @@ use App\Notifications\EcomNotification;
 use Notification;
 use PDF;
 use App\Models\SliderDetails;
+use App\Models\Testimonial;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redis;
-use RealRashid\SweetAlert\Facades\Alert as FacadesAlert;
+// namespaces //
+
 
 class AdminController extends Controller
 {
@@ -483,6 +482,66 @@ class AdminController extends Controller
         $message = ContactUs::find($id);
         $message->delete();
         Alert::success('success','Message deleted successfully.');
+        return redirect()->back();
+    }
+    // testimonial manage
+    public function showTestimonial(){
+        $testimonials = Testimonial::all();
+        $data = compact('testimonials');
+        return view('admin.testimonial-handler')->with($data);
+    }
+    public function editTestimonial($id){
+        $testimonialDetails = Testimonial::find($id);
+        $testimonials = Testimonial::all();
+        $data = compact('testimonials','testimonialDetails');
+        return view('admin.testimonial-handler')->with($data);
+    }
+    public function updateTestimonial(Request $request,$id){
+        $testimonial = Testimonial::find($id);
+        $testimonialImage = $testimonial->image;
+        if ($request->image) {
+            unlink('testimonial-images/' . $testimonialImage);
+            $fileNameWithExtention = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExtention, PATHINFO_FILENAME);
+            $fileExtention = $request->file('image')->getClientOriginalExtension();
+            $fileNameToStore = $fileName . '_' . time() . '.' . $fileExtention;
+            $request->image->move(public_path('testimonial-images/'), $fileNameToStore);
+            $testimonial->image = $fileNameToStore;
+        }
+        else{
+            $testimonial->image = $testimonialImage;
+        }
+        $testimonial->designation = $request->designation;
+        $testimonial->detail = $request->detail;
+        $testimonial->name = $request->name;
+        $testimonial->save();
+        ALert::success('success', 'Testimonial details updated successfully.');
+        return redirect()->back();
+    }
+    public function createTestimonial(){
+        $testimonials = Testimonial::all();
+        $data = compact('testimonials');
+        return view('admin.testimonial-handler')->with($data);
+    }
+    public function addTestimonial(Request $request){
+        $request->validate([
+            'designation' => 'required',
+            'name' => 'required',
+            'detail' => 'required',
+            'image' => 'required',
+        ]);
+        $testimonial = new Testimonial;
+        $fileNameWithExtention = $request->file('image')->getClientOriginalName();
+        $fileName = pathinfo($fileNameWithExtention, PATHINFO_FILENAME);
+        $fileExtention = $request->file('image')->getClientOriginalExtension();
+        $fileNameToStore = $fileName . '_' . time() . '.' . $fileExtention;
+        $request->image->move(public_path('testimonial-images/'), $fileNameToStore);
+        $testimonial->image = $fileNameToStore;
+        $testimonial->designation = $request->designation;
+        $testimonial->detail = $request->detail;
+        $testimonial->name = $request->name;
+        $testimonial->save();
+        ALert::success('success', 'Testimonial added successfully.');
         return redirect()->back();
     }
 }

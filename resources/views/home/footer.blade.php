@@ -7,9 +7,9 @@
                         <a href="#"><img width="210" src="/home/images/logo.png" alt="#" /></a>
                     </div>
                     <div class="information_f">
-                        <p><strong>ADDRESS:</strong> 28 White tower, Street Name New York City, USA</p>
-                        <p><strong>TELEPHONE:</strong> +91 987 654 3210</p>
-                        <p><strong>EMAIL:</strong> yourmain@gmail.com</p>
+                        <p><strong>ADDRESS:</strong> Basti Roshan Din, P/O chak nadir shah, Rabnawaz Pura, Bahawalnagar.</p>
+                        <p><strong>TELEPHONE:</strong> +92 300 792 6926</p>
+                        <p><strong>EMAIL:</strong> awaistayyab27@gmail.com</p>
                     </div>
                 </div>
             </div>
@@ -21,12 +21,10 @@
                                 <div class="widget_menu">
                                     <h3>Menu</h3>
                                     <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About</a></li>
-                                        <li><a href="#">Services</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Blog</a></li>
-                                        <li><a href="#">Contact</a></li>
+                                        <li><a href="/">Home</a></li>
+                                        <li><a href="/showAllProducts">Products</a></li>
+                                        <li><a href="/show/blog">Blog</a></li>
+                                        <li><a href="/contact/us">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -34,12 +32,11 @@
                                 <div class="widget_menu">
                                     <h3>Account</h3>
                                     <ul>
-                                        <li><a href="#">Account</a></li>
-                                        <li><a href="#">Checkout</a></li>
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="#">Register</a></li>
-                                        <li><a href="#">Shopping</a></li>
-                                        <li><a href="#">Widget</a></li>
+                                        <li><a href="/dashboard">Account</a></li>
+                                        <li><a href="/checkout">Checkout</a></li>
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/register">Register</a></li>
+                                        <li><a href="/showAllProducts">Shopping</a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -360,9 +360,8 @@ a:focus {
 }
 
 .product_section .box {
+    width: 300px;
     position: relative;
-    margin-top: 25px;
-    padding: 35px 35px;
     background-color: #f7f8f9;
     -webkit-transition: all .3s;
     transition: all .3s;

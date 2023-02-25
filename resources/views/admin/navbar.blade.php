@@ -4,14 +4,14 @@
     </div>
     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
       <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-        <span class="mdi mdi-menu"></span>
+        <span class="mdi mdi-menu"><i class="fa-solid fa-bars"></i></span>
       </button>
       <ul class="navbar-nav w-100">
       </ul>
       <ul class="navbar-nav navbar-nav-right">
         <li class="nav-item dropdown border-left">
           <a class="nav-link count-indicator" id="messageDropdown" href="check/messages">
-            <i class="mdi mdi-email"></i>
+            <i class="fa-solid fa-message"></i>
             <span class="count bg-success"></span>
           </a>
         </li>

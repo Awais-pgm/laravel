@@ -57,6 +57,8 @@ Route::controller(HomeController::class)->group(function () {
     // contact us section
     Route::get('contact/us' , 'contactUs');
     Route::post('save/contact/us' , 'saveContactUs');
+     // search system for products
+    //  Route::get('search','index');
     
 });
 
@@ -107,6 +109,14 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('check/messages','checkMessages');
     Route::get('read/more/{id}','readMessage');
     Route::get('delete/message/{id}','deleteMessage');
+    // testimonail manage
+    Route::get('manage/testimonials','showTestimonial')->name('manage.testimonials');
+    Route::get('edit/testimonial/{id}','editTestimonial');
+    Route::post('update/testimonial/details/{id}','updateTestimonial');
+    Route::get('create/more/testimonials','createTestimonial');
+    Route::post('add/more/testimonial','addTestimonial');
+
+
 });
 
 Route::controller(StripeController::class)->group(function () {

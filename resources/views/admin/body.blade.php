@@ -15,7 +15,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <i class="fa-solid fa-arrow-up-right-dots"></i>
                                 </div>
                             </div>
                         </div>
@@ -36,7 +36,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <i class="fa-solid fa-arrow-up-right-dots"></i>
                                 </div>
                             </div>
                         </div>
@@ -55,7 +55,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-danger">
-                                    <span class="mdi mdi-arrow-bottom-left icon-item"></span>
+                                    <i class="fa-solid fa-arrow-down-short-wide"></i>
                                 </div>
                             </div>
                         </div>
@@ -84,7 +84,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <i class="fa-solid fa-sack-dollar"></i>
                                 </div>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <i class="fa-regular fa-thumbs-up"></i>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@
                             </div>
                             <div class="col-3">
                                 <div class="icon icon-box-success ">
-                                    <span class="mdi mdi-arrow-top-right icon-item"></span>
+                                    <i class="fa-solid fa-spinner"></i>
                                 </div>
                             </div>
                         </div>

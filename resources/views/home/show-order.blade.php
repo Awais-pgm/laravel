@@ -18,7 +18,7 @@
                     <th >Product Title</th>
                     <th >Quantity</th>
                     <th >Price</th>
-                    <th >Action</th>
+                    <th >Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,7 +43,7 @@
                         <td>{{ $order->product_quantity }}</td>
                         <td>{{ $order->product_price }}</td>
                         <td>
-                           <a href="/cancel/order/{{ $order->id }}" onclick="return confirm('Are you sure you want to cancel the order?')" class="badge bg-danger text-light">Cancel Order</a>
+                           <a href="/cancel/order/{{ $order->id }}" onclick="return confirm('Are you sure you want to cancel the order?')" class="badge bg-danger text-light"><i class="fa-solid fa-delete-left"></i></a>
                         </td> 
                     </tr>
                     @php

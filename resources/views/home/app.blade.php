@@ -56,6 +56,17 @@
     <script src="https://js.stripe.com/v3/"></script>
     {{-- sweet alert --}}
     @include('sweetalert::alert')
+    {{-- keeping page same position --}}
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
 </body>
 
 </html>

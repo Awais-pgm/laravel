@@ -38,10 +38,9 @@
                                     <td>{{ $category->category }}</td>
                                     <td>{{ $category->description }}</td>
                                     <td><a href="/restoreDeletedCategory/{{ $category->id }}" class="btn btn-success"
-                                            onclick="return confirm('Want To Restore This Item?')">Restore</a></td>
+                                            onclick="return confirm('Want To Restore This Item?')"><i class="fa-solid fa-trash-arrow-up"></i></a></td>
                                     <td><a href="/forceDelete/{{ $category->id }}" class="btn btn-danger"
-                                            onclick="return confirm('Want To Permanently Delete This Item?')"><i
-                                                class="mdi mdi-delete-forever"></i></a></td>
+                                            onclick="return confirm('Want To Permanently Delete This Item?')"><i class="fa-solid fa-delete-left"></i></a></td>
                                 </tr>
                                 @php
                                     $sno += 1;
@@ -82,10 +81,9 @@
                                 <td>{{ $product->discount_price }}</td>
                                 <td>{{ $product->category_name }}</td>
                                 <td><a href="/restoreDeletedProduct/{{ $product->id }}" class="btn btn-success"
-                                        onclick="return confirm('Want To Restore This Item?')">Restore</a></td>
+                                        onclick="return confirm('Want To Restore This Item?')"><i class="fa-solid fa-trash-arrow-up"></i></a></td>
                                 <td><a href="/forceDeleteProduct/{{ $product->id }}" class="btn btn-danger"
-                                        onclick="return confirm('Want To Permanently Delete This Item?')"><i
-                                            class="mdi mdi-delete-forever"></i></a></td>
+                                        onclick="return confirm('Want To Permanently Delete This Item?')"><i class="fa-solid fa-delete-left"></i></i></a></td>
                             </tr>
                             @php
                                 $sno += 1;

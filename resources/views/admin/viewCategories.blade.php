@@ -48,10 +48,9 @@
                                         </td>
                                     <td>{{ $category->category }}</td>
                                     <td>{{ $category->description }}</td>
-                                    <td><a href="/editCategory/{{ $category->id }}" class="btn btn-success">Edit</a></td>
+                                    <td><a href="/editCategory/{{ $category->id }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a></td>
                                     <td><a href="/softDeleteCat/{{ $category->id }}" class="btn btn-danger"
-                                            onclick="return confirm('Are You Sure You want to delete this?')"><i
-                                                class="mdi mdi-delete-sweep"></i></a></td>
+                                            onclick="return confirm('Are You Sure You want to delete this?')"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                                 @php
                                     $sno += 1;

@@ -45,10 +45,9 @@
                                     <td>{{ $product->price }}</td>
                                     <td>{{ $product->quantity }}</td>
                                     <td>{{ $product->discount_price }}</td>
-                                    <td><a href="/editProduct/{{ $product->id }}" class="btn btn-success">Edit</a></td>
+                                    <td><a href="/editProduct/{{ $product->id }}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a></td>
                                     <td><a href="/softDeleteProduct/{{ $product->id }}" class="btn btn-danger"
-                                            onclick="return confirm('Are You Sure You want to delete this?')"><i
-                                                class="mdi mdi-delete-sweep"></i></a></td>
+                                            onclick="return confirm('Are You Sure You want to delete this?')"><i class="fa-solid fa-trash"></i></a></td>
                                 </tr>
                                 @php
                                     $sno += 1;

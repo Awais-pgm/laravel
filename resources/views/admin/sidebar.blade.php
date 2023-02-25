@@ -10,7 +10,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="/redirect">
                 <span class="menu-icon">
-                    <i class="mdi mdi-speedometer"></i>
+                    <i class="fa-solid fa-gauge-high"></i>
                 </span>
                 <span class="menu-title">Dashboard</span>
             </a>
@@ -18,7 +18,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('addProduct') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="fa-brands fa-product-hunt"></i>
                 </span>
                 <span class="menu-title">Add Product</span>
             </a>
@@ -26,7 +26,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('showProducts') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-laptop"></i>
+                    <i class="fa-regular fa-eye"></i>
                 </span>
                 <span class="menu-title">Show Products</span>
             </a>
@@ -34,7 +34,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('viewCategoryPage') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-playlist-play"></i>
+                    <i class="fa-solid fa-plus"></i>
                 </span>
                 <span class="menu-title">Add Category</span>
             </a>
@@ -42,7 +42,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('showCategories') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-playlist-play"></i>
+                    <i class="fa-solid fa-eye"></i>
                 </span>
                 <span class="menu-title">Show Categories</span>
             </a>
@@ -50,7 +50,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('viewTrash') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-solid fa-trash-can-arrow-up"></i>
                 </span>
                 <span class="menu-title">View Trash</span>
             </a>
@@ -58,7 +58,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('viewAllOrders') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-solid fa-arrow-up-1-9"></i>
                 </span>
                 <span class="menu-title">View Orders</span>
             </a>
@@ -66,7 +66,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('slider.handler') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-solid fa-sliders"></i>
                 </span>
                 <span class="menu-title">Slider Handler</span>
             </a>
@@ -74,7 +74,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('create.blog.category') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-solid fa-square-plus"></i>
                 </span>
                 <span class="menu-title">Create Blog Category</span>
             </a>
@@ -82,7 +82,7 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('create.blog.post') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-solid fa-blog"></i>
                 </span>
                 <span class="menu-title">Create Blog post</span>
             </a>
@@ -90,9 +90,17 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('show.all.posts') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-delete"></i>
+                    <i class="fa-brands fa-blogger"></i>    
                 </span>
                 <span class="menu-title">All Blog posts</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('manage.testimonials') }}">
+                <span class="menu-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+                <span class="menu-title">Testimonials</span>
             </a>
         </li>
 

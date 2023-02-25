@@ -24,7 +24,7 @@
     <!-- end product section -->
 
     <!-- subscribe section -->
-    @include('home.subscribe')
+    {{-- @include('home.subscribe') --}}
     <!-- end subscribe section -->
     <!-- client section -->
     @include('home.client')
