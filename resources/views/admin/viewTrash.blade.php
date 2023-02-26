@@ -1,7 +1,7 @@
 @extends('admin.app')
 @section('content')
     @push('title')
-        <title>Trash Categories</title>
+        <title>Trash Bin</title>
     @endpush
     @include('admin.sidebar')
     @include('admin.navbar')

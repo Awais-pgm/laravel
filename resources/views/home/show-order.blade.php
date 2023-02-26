@@ -18,7 +18,7 @@
                     <th >Product Title</th>
                     <th >Quantity</th>
                     <th >Price</th>
-                    <th >Delete</th>
+                    <th >Cancel</th>
                 </tr>
             </thead>
             <tbody>

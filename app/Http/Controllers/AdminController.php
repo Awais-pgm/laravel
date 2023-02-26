@@ -273,7 +273,6 @@ class AdminController extends Controller
     public function forceDeleteProduct($id)
     {
         $trashedProduct = Products::withTrashed()->find($id);
-        $trashedCategoryName = $trashedProduct->category_name;
         $trashedProductImg = $trashedProduct->image;
         unlink('product-images/' . $trashedProductImg);
         $trashedProduct->forceDelete();
@@ -296,6 +295,13 @@ class AdminController extends Controller
         $orders = Order::all();
         $data = compact('orders');
         return view('admin.all-orders')->with($data);
+    }
+    public function forceDeleteOrder($id)
+    {
+        $canceledOrder = Order::withTrashed()->find($id);
+        $canceledOrder->forceDelete();
+        Alert::success('Success', 'Order Has Been Deleted Successfully.');
+        return redirect()->back();
     }
     public function updatePaymentStatus($id)
     {
@@ -329,6 +335,11 @@ class AdminController extends Controller
         view()->share('Order', $data);
         $pdf = PDF::loadView('admin.invoice', $data);
         return $pdf->download('order-details.pdf');
+    }
+    public function canceledOrders(){
+        $orders = Order::onlyTrashed()->get();
+        $data = compact('orders');
+        return view('admin.canceled-orders')->with($data);
     }
     // send email
     public function sendEmail($id)

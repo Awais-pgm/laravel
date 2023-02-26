@@ -9,7 +9,7 @@
         <div class="content-wrapper">
             @if (count($products) > 0)
                 <h2 class="text-center fs-2 my-4 text-light">View All Products</h2>
-                <div class="table-responsive ">
+                <div class="table-responsive">
                     <table class="table text-light border" id="myTable">
                         <thead>
                             <tr>

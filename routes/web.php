@@ -85,12 +85,14 @@ Route::controller(AdminController::class)->group(function () {
     Route::get('/restoreAllDeletedProducts', 'restoreAllDeletedProducts')->name('restoreAllDeletedProducts');
     Route::get('/restoreDeletedProduct/{id}', 'restoreDeletedProduct')->name('restoreDeletedProduct');
     Route::get('/forceDeleteProduct/{id}', 'forceDeleteProduct')->name('forceDeleteProduct');
-    //<--------- Admin's Products route section (CRUD) ---------->
+    //<--------- Admin's Orders route section (CRUD) ---------->
     Route::get('/view/all/orders', 'viewAllOrders')->name('viewAllOrders');
     Route::get('/payment/paid/{id}', 'updatePaymentStatus')->name('updatePaymentStatus');
     Route::get('/product/delivered/{id}', 'updateDeliveryStatus')->name('updateDeliveryStatus');
     Route::get('/invoice/{user_id}/{order_id}','invoice');
     Route::get('/print/invoice/{user_id}/{order_id}','printIvoice');
+    Route::get('/canceled/orders', 'canceledOrders')->name('viewCanceledOrders');
+    Route::get('/delete/order/{id}', 'forceDeleteOrder')->name('forceDeleteOrder');
     //<--------- Admin's send email notification ---------->
     Route::get('send/email/to/user/{id}','sendEmail');
     Route::post('send/user/email/{id}','sendEmailToUser');

@@ -16,6 +16,9 @@
             </a>
         </li>
         <li class="nav-item menu-items">
+            <h1 class="text-center my-2 text-success">Manage Products</h1>
+        </li>
+        <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('addProduct') }}">
                 <span class="menu-icon">
                     <i class="fa-brands fa-product-hunt"></i>
@@ -30,6 +33,9 @@
                 </span>
                 <span class="menu-title">Show Products</span>
             </a>
+        </li>
+        <li class="nav-item menu-items">
+            <h1 class="text-center my-2 text-success">Manage Categories</h1>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('viewCategoryPage') }}">
@@ -48,12 +54,7 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('viewTrash') }}">
-                <span class="menu-icon">
-                    <i class="fa-solid fa-trash-can-arrow-up"></i>
-                </span>
-                <span class="menu-title">View Trash</span>
-            </a>
+            <h1 class="text-center my-2 text-success">Manage Orders</h1>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('viewAllOrders') }}">
@@ -64,12 +65,15 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="{{ route('slider.handler') }}">
+            <a class="nav-link" href="{{ route('viewCanceledOrders') }}">
                 <span class="menu-icon">
-                    <i class="fa-solid fa-sliders"></i>
+                    <i class="fa-solid fa-arrow-down-1-9"></i>
                 </span>
-                <span class="menu-title">Slider Handler</span>
+                <span class="menu-title">View Canceled Orders</span>
             </a>
+        </li>
+        <li class="nav-item menu-items">
+            <h1 class="text-center my-2 text-success">Manage Blog</h1>
         </li>
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('create.blog.category') }}">
@@ -96,6 +100,9 @@
             </a>
         </li>
         <li class="nav-item menu-items">
+            <h1 class="text-center my-2 text-success">Others</h1>
+        </li>
+        <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('manage.testimonials') }}">
                 <span class="menu-icon">
                     <i class="fa-solid fa-users"></i>
@@ -103,6 +110,21 @@
                 <span class="menu-title">Testimonials</span>
             </a>
         </li>
-
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('viewTrash') }}">
+                <span class="menu-icon">
+                    <i class="fa-solid fa-trash-can-arrow-up"></i>
+                </span>
+                <span class="menu-title">View Trash</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('slider.handler') }}">
+                <span class="menu-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </span>
+                <span class="menu-title">Slider Handler</span>
+            </a>
+        </li>
     </ul>
 </nav>

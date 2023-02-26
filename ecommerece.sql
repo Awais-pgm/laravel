@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 25, 2023 at 03:36 PM
+-- Generation Time: Feb 26, 2023 at 02:45 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -40,11 +40,8 @@ CREATE TABLE `blog_categories` (
 --
 
 INSERT INTO `blog_categories` (`id`, `category_name`, `category_description`, `created_at`, `updated_at`) VALUES
-(1, 'clothes', 'this is blog category for clothes.', '2023-02-15 09:22:26', '2023-02-15 09:22:26'),
-(2, 'shoes', 'this is shoes categoy for blog', '2023-02-15 09:23:12', '2023-02-15 09:23:12'),
-(3, 'fashion', 'Fashion category for clothes', '2023-02-15 09:23:33', '2023-02-15 09:23:33'),
-(4, 'Cameras', 'these cameras are beautiful', '2023-02-15 12:02:54', '2023-02-15 12:02:54'),
-(5, 'Cameras', 'these cameras are beautiful', '2023-02-15 12:02:54', '2023-02-15 12:02:54');
+(1, 'clothes', 'This category belongs to clothes', '2023-02-26 06:18:44', '2023-02-26 06:18:44'),
+(2, 'Cameras', 'Cameras', '2023-02-26 06:19:54', '2023-02-26 06:19:54');
 
 -- --------------------------------------------------------
 
@@ -67,9 +64,7 @@ CREATE TABLE `blog_posts` (
 --
 
 INSERT INTO `blog_posts` (`id`, `post_title`, `post_description`, `post_image`, `category_id`, `created_at`, `updated_at`) VALUES
-(4, 'Camera', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perspiciatis ratione nesciunt adipisci repellat illo doloremque? Nulla rem, similique recusandae voluptatum quam ducimus perferendis corrupti tenetur quibusdam suscipit eius delectus?\nAut, dolorum enim laboriosam nobis officia illum beatae error maiores iure odio sunt accusamus tempora? Veniam dolorum numquam ducimus neque id dolores fuga, animi cumque rerum rem consectetur inventore perspiciatis?\nVeniam iste assumenda temporibus odit illum unde nesciunt, accusamus consequuntur cumque voluptas eveniet corporis inventore ea atque a architecto dolorum, ratione recusandae tenetur quibusdam saepe? Assumenda in incidunt labore excepturi.\nAperiam facere commodi labore harum voluptas illum ipsa culpa excepturi asperiores cum, aut veniam. Sapiente necessitatibus laborum modi ipsa temporibus, dolore provident dicta sed pariatur obcaecati reiciendis assumenda ea deleniti.\nNemo rem cumque, ipsam, ad iure, voluptatibus vel officiis magnam dicta adipisci ea est. Excepturi natus culpa earum aspernatur, quae iste possimus maiores voluptates in consequuntur voluptate necessitatibus eos pariatur!\nQuasi delectus a voluptatem sit, architecto molestiae veritatis esse soluta nemo nulla deserunt quisquam harum libero saepe possimus aspernatur velit fuga facere officia eius sequi temporibus, doloribus culpa fugiat. Repellendus?\nArchitecto natus error amet! Quibusdam beatae labore officia architecto temporibus voluptatem, doloremque, corrupti eligendi impedit deleniti odit eaque rerum dolor deserunt repellendus, iure natus? Accusantium suscipit natus necessitatibus illo eveniet.\nSequi delectus beatae iusto dignissimos nemo consequatur tempora harum voluptas quisquam, cumque iure odio reprehenderit quis maxime ducimus dolores commodi a distinctio autem earum at! Quae, veritatis. Esse, vero repudiandae.\nDeserunt vero amet facere deleniti similique consectetur labore est minus quasi assumenda aut atque sit nesciunt veniam obcaecati praesentium, provident voluptatibus exercitationem! Nostrum ex voluptatem tempora ipsa doloremque dolore sequi.\nMollitia, id iusto maiores inventore maxime, esse reiciendis hic nostrum est quod vel assumenda odit soluta. Aperiam est alias minus pariatur fugit quasi illo! Sed, quasi aperiam. Unde, facilis beatae.', 'cam1_1676481307.jpg', '5', '2023-02-15 12:15:07', '2023-02-15 12:15:07'),
-(7, 'shoes', 'lorem ipsum', 'shoes2_1676572953.jpg', '2', '2023-02-16 13:42:33', '2023-02-16 13:42:33'),
-(8, 'shirt', 'death', 'death-6054627_1676573744.jpg', '1', '2023-02-16 13:55:44', '2023-02-16 13:55:44');
+(1, 'Camera', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur veritatis sequi magnam unde nam iure iste? Earum culpa repudiandae perferendis explicabo magni minima ipsum. Natus quaerat dolor aspernatur libero non.', 'cam3_1677410438.jpg', '2', '2023-02-26 06:20:38', '2023-02-26 06:20:38');
 
 -- --------------------------------------------------------
 
@@ -114,12 +109,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `category`, `created_at`, `updated_at`, `deleted_at`, `image`, `description`) VALUES
-(1, 'cameras', '2023-02-03 09:01:11', '2023-02-24 02:16:27', NULL, 'cam1_1675432871.jpg', 'This category holds all the cameras'),
-(2, 'Watches', '2023-02-03 09:01:37', '2023-02-03 09:01:37', NULL, 'watch_1675432897.jpg', 'this category holds all the watches'),
-(3, 'Glasses', '2023-02-03 09:02:01', '2023-02-03 09:02:01', NULL, 'glasses_1675432921.jpg', 'This category holds all the glasses'),
-(4, 'Shoes', '2023-02-03 09:02:23', '2023-02-03 09:02:23', NULL, 'shoes2_1675432943.jpg', 'This category holds all the shoes.'),
-(5, 'Tables', '2023-02-03 09:02:54', '2023-02-03 09:02:54', NULL, 'diningtable_1675432974.jpg', 'This category holds all the material stuff'),
-(6, 'Beauty', '2023-02-03 09:03:29', '2023-02-03 09:03:29', NULL, 'lipstick_1675433009.jpg', 'This category holds all the beauty stuff');
+(1, 'Cameras', '2023-02-26 06:21:37', '2023-02-26 06:21:37', NULL, 'C1_1677410496.PNG', 'categiry dexcription');
 
 -- --------------------------------------------------------
 
@@ -189,35 +179,35 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
 (3, '2014_10_12_200000_add_two_factor_columns_to_users_table', 1),
-(4, '2019_08_19_000000_create_failed_jobs_table', 1),
-(5, '2019_12_14_000001_create_personal_access_tokens_table', 1),
-(6, '2023_01_18_080854_create_sessions_table', 1),
-(7, '2023_01_21_075619_create_categories_table', 1),
-(8, '2023_01_21_163548_add_soft_delete_columns_to_categories', 1),
-(9, '2023_01_21_192512_create_products_table', 1),
-(10, '2023_01_24_094218_add_image_and_description_columns_to_categories', 1),
-(11, '2023_01_25_152421_add_category_name_columns_to_products', 1),
-(12, '2023_01_26_164403_add_deleted_at_columns_to_products', 1),
-(13, '2023_02_03_130135_drop_carts_table', 1),
-(14, '2023_02_03_130410_create_carts_table', 1),
-(15, '2023_02_03_133209_create_orders_table', 1),
-(16, '2023_02_03_133346_create_testings_table', 1),
-(18, '2023_02_03_133525_drop_testings_table', 2),
-(20, '2023_02_06_135602_add_total_price_columns_to_orders_table', 3),
-(21, '2023_02_07_163642_add_delivery_charges_columns_to_orders_table', 4),
-(22, '2019_05_03_000001_create_customer_columns', 5),
-(23, '2019_05_03_000002_create_subscriptions_table', 5),
-(24, '2019_05_03_000003_create_subscription_items_table', 5),
-(25, '2023_02_11_203242_add_payment_method_columns_to_orders_table', 6),
-(26, '2023_02_12_170731_create_notifications_table', 7),
-(27, '2023_02_14_161919_create_comments_table', 8),
-(28, '2023_02_14_161933_create_replies_table', 8),
-(29, '2023_02_14_171354_add_product_id_columns_to_comments_table', 9),
-(30, '2023_02_15_110112_create_slider_details_table', 10),
-(31, '2023_02_15_132125_create_blog_categories_table', 11),
-(32, '2023_02_15_132138_create_blog_posts_table', 11),
-(33, '2023_02_16_105338_create_contact_us_table', 12),
-(38, '2023_02_20_110453_create_testimonials_table', 13);
+(4, '2019_05_03_000001_create_customer_columns', 1),
+(5, '2019_05_03_000002_create_subscriptions_table', 1),
+(6, '2019_05_03_000003_create_subscription_items_table', 1),
+(7, '2019_08_19_000000_create_failed_jobs_table', 1),
+(8, '2019_12_14_000001_create_personal_access_tokens_table', 1),
+(9, '2023_01_18_080854_create_sessions_table', 1),
+(10, '2023_01_21_075619_create_categories_table', 1),
+(11, '2023_01_21_163548_add_soft_delete_columns_to_categories', 1),
+(12, '2023_01_21_192512_create_products_table', 1),
+(13, '2023_01_24_094218_add_image_and_description_columns_to_categories', 1),
+(14, '2023_01_25_152421_add_category_name_columns_to_products', 1),
+(15, '2023_01_26_164403_add_deleted_at_columns_to_products', 1),
+(16, '2023_02_03_130135_drop_carts_table', 1),
+(17, '2023_02_03_130410_create_carts_table', 1),
+(18, '2023_02_03_133209_create_orders_table', 1),
+(19, '2023_02_06_135602_add_total_price_columns_to_orders_table', 1),
+(20, '2023_02_07_163642_add_delivery_charges_columns_to_orders_table', 1),
+(21, '2023_02_11_203242_add_payment_method_columns_to_orders_table', 1),
+(22, '2023_02_12_170731_create_notifications_table', 1),
+(23, '2023_02_14_161919_create_comments_table', 1),
+(24, '2023_02_14_161933_create_replies_table', 1),
+(25, '2023_02_14_171354_add_product_id_columns_to_comments_table', 1),
+(26, '2023_02_15_110112_create_slider_details_table', 1),
+(27, '2023_02_15_132125_create_blog_categories_table', 1),
+(28, '2023_02_15_132138_create_blog_posts_table', 1),
+(29, '2023_02_16_105338_create_contact_us_table', 1),
+(30, '2023_02_20_110453_create_testimonials_table', 1),
+(31, '2023_02_25_183421_add_google_id_columns_to_user_table', 1),
+(32, '2023_02_26_111512_add_deleted_at_to_orders_table', 2);
 
 -- --------------------------------------------------------
 
@@ -258,16 +248,17 @@ CREATE TABLE `orders` (
   `payment_status` varchar(255) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `total_price` varchar(255) DEFAULT NULL,
-  `payment_method` varchar(255) NOT NULL
+  `total_price` varchar(255) NOT NULL,
+  `payment_method` varchar(255) NOT NULL,
+  `deleted_at` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`id`, `user_name`, `user_id`, `user_email`, `user_mobile_no`, `user_address`, `product_name`, `product_id`, `product_quantity`, `product_price`, `product_image`, `delivery_status`, `payment_status`, `created_at`, `updated_at`, `total_price`, `payment_method`) VALUES
-(87, 'Muhammad Awais', '5', 'wsiwjiaw@gmail.com', '03007926926', 'Basti roshan din', 'watch', '3', '1', '2300', 'watch_1675433807.jpg', 'processing', 'pending', '2023-02-24 02:17:27', '2023-02-24 02:17:27', '2300', 'COD');
+INSERT INTO `orders` (`id`, `user_name`, `user_id`, `user_email`, `user_mobile_no`, `user_address`, `product_name`, `product_id`, `product_quantity`, `product_price`, `product_image`, `delivery_status`, `payment_status`, `created_at`, `updated_at`, `total_price`, `payment_method`, `deleted_at`) VALUES
+(3, 'Muhammad Awais', '3', 'userokex1@gmail.com', '03007926926', 'Basti roshan din', 'Camera', '2', '1', '5000', 'cam2_1677416406.jpg', 'processing', 'pending', '2023-02-26 08:00:34', '2023-02-26 08:01:32', '5000', 'COD', '2023-02-26 13:01:32');
 
 -- --------------------------------------------------------
 
@@ -326,14 +317,8 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `title`, `description`, `image`, `price`, `quantity`, `categories_id`, `discount_price`, `created_at`, `updated_at`, `category_name`, `deleted_at`) VALUES
-(1, 'Lipstick', 'Red lipstick, Medora', 'lipstick_1675433574.jpg', '600', 54, '6', '300', '2023-02-03 09:12:54', '2023-02-24 02:16:35', 'Beauty', NULL),
-(2, 'watch', 'descent watch with white color', 'watch1_1675433744.jpg', '4500', 19, '2', NULL, '2023-02-03 09:15:44', '2023-02-16 09:19:50', 'Watches', NULL),
-(3, 'watch', 'this is another watch', 'watch_1675433807.jpg', '2300', 8, '2', NULL, '2023-02-03 09:16:47', '2023-02-24 02:17:27', 'Watches', NULL),
-(4, 'Camera', 'sony camera', 'cam1_1675433839.jpg', '6700', 34, '1', NULL, '2023-02-03 09:17:19', '2023-02-03 09:17:19', 'cameras', NULL),
-(5, 'camera', 'camera with flash', 'cam2_1675433875.jpg', '6500', 0, '1', NULL, '2023-02-03 09:17:55', '2023-02-03 09:17:55', 'cameras', NULL),
-(6, 'shoes', 'very nice shoes', 'shoes2_1675433922.jpg', '7600', 54, '4', NULL, '2023-02-03 09:18:42', '2023-02-03 09:18:42', 'Shoes', NULL),
-(7, 'shoes', 'shoes for men', 'shoes_1675433953.jpg', '5600', 4, '4', NULL, '2023-02-03 09:19:13', '2023-02-03 09:19:13', 'Shoes', NULL),
-(8, 'glasses', 'glasses, black', 'glasses_1675433994.jpg', '7600', 54, '3', NULL, '2023-02-03 09:19:54', '2023-02-03 09:19:54', 'Glasses', NULL);
+(1, 'Camera', 'camera with flash', 'cam3_1677413648.jpg', '7000', 45, '1', NULL, '2023-02-26 06:26:06', '2023-02-26 07:19:13', 'Cameras', '2023-02-26 12:19:13'),
+(2, 'Camera', 'another camera', 'cam2_1677416406.jpg', '5000', 32, '1', NULL, '2023-02-26 07:13:39', '2023-02-26 08:01:32', 'Cameras', NULL);
 
 -- --------------------------------------------------------
 
@@ -371,7 +356,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('dbh4dhTTUvxCnp5MardxhNUicJyD9yVn29nDgtFK', 5, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'YTo1OntzOjY6Il90b2tlbiI7czo0MDoidzRsck9YY3pIQlg1aUJXbmVSalpkMXlldFQzTGNhUGFsY2NCWkp0ZyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC92aWV3L2FsbC9vcmRlcnMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aTo1O3M6NToiYWxlcnQiO2E6MDp7fX0=', 1677223153);
+('WCd0QwOn5pRTlYqosIWwUuhpXVHOMa0gym44ITad', 3, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiTnNNOU1mdkNuT0FUNEd6Y1U5Q2Y4RU5YNEVzVFpyQTdLbmg4YmpoSyI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mzc6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jYW5jZWxlZC9vcmRlcnMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjM6InVybCI7YTowOnt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MztzOjU6ImFsZXJ0IjthOjA6e319', 1677419047);
 
 -- --------------------------------------------------------
 
@@ -396,7 +381,7 @@ CREATE TABLE `slider_details` (
 --
 
 INSERT INTO `slider_details` (`id`, `heading1`, `detail1`, `heading2`, `detail2`, `heading3`, `detail3`, `created_at`, `updated_at`) VALUES
-(1, 'Every thing is 20% off', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'come here to get discounts', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'it is beautiful to see you here', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', NULL, '2023-02-15 06:31:10');
+(1, 'heading ', 'Detail', 'Heading ', 'Detail', 'Heading', 'Detail', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -451,15 +436,6 @@ CREATE TABLE `testimonials` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `testimonials`
---
-
-INSERT INTO `testimonials` (`id`, `designation`, `name`, `detail`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'CEO', 'Muhammad Awais', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore ut rerum itaque asperiores dolorum nulla. Ad, dolor doloribus facere architecto, sed voluptatem, quam ipsum beatae odit blanditiis reprehenderit obcaecati.', 'IMG_4761_1676900586.jpg', NULL, '2023-02-20 08:43:06'),
-(2, 'Cheif Exucetiv', 'Ali Haider', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'IMG_4761_1676913051.jpg', '2023-02-20 12:10:51', '2023-02-20 12:10:51'),
-(3, 'Manager', 'Muhammad Junaid', 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum blanditiis inventore a earum alias consequuntur id officiis molestiae. Tenetur magni cum consequuntur illum. Autem, pariatur odio? Fuga quas sit rem.', 'IMG_4761_1676914987.jpg', '2023-02-20 12:43:07', '2023-02-20 12:43:07');
-
 -- --------------------------------------------------------
 
 --
@@ -486,18 +462,16 @@ CREATE TABLE `users` (
   `stripe_id` varchar(255) DEFAULT NULL,
   `pm_type` varchar(255) DEFAULT NULL,
   `pm_last_four` varchar(4) DEFAULT NULL,
-  `trial_ends_at` timestamp NULL DEFAULT NULL
+  `trial_ends_at` timestamp NULL DEFAULT NULL,
+  `google_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `usertype`, `phone`, `address`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `stripe_id`, `pm_type`, `pm_last_four`, `trial_ends_at`) VALUES
-(4, 'Muhammad Awais', 'Awaistayyab27@gmail.com', '0', '03007926926', 'Basti roshan din', NULL, '$2y$10$HPjZjwXHTDefSgurJEETx.nlgI3ySQV8a.6aONH4VItZkAABr8Tc.', NULL, NULL, NULL, NULL, NULL, NULL, '2023-02-12 10:41:54', '2023-02-12 10:41:54', NULL, NULL, NULL, NULL),
-(5, 'Muhammad Awais', 'wsiwjiaw@gmail.com', '1', '03007926926', 'Basti roshan din', '2023-02-12 10:48:31', '$2y$10$WqtR3QJ8Bg3CsaLuvXJhCuGLCsBBr7UvrutvwNeZIh8IzjiuSEYSu', NULL, NULL, NULL, NULL, NULL, NULL, '2023-02-12 10:43:19', '2023-02-12 10:48:31', NULL, NULL, NULL, NULL),
-(6, 'Junaid', 'jarviz3333@gmail.com', '0', '03135002979', 'mureed wala', NULL, '$2y$10$cZ6PHQbQTzjIvpRjn4RvTubXlT58V1sbGY1JZDGl0c.U7jZAiHRwK', NULL, NULL, NULL, NULL, NULL, NULL, '2023-02-12 10:52:12', '2023-02-12 10:52:12', NULL, NULL, NULL, NULL),
-(7, 'Muhammad Awais', 'alihaider203472@gmail.com', '0', '03007926926', 'Basti roshan din', NULL, '$2y$10$1PTurwHo715j54VnDr0BTug1073.NZAb8am16.ED/3XUomJn7aEIq', NULL, NULL, NULL, NULL, NULL, NULL, '2023-02-14 05:11:42', '2023-02-14 05:11:42', NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `usertype`, `phone`, `address`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `two_factor_confirmed_at`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `stripe_id`, `pm_type`, `pm_last_four`, `trial_ends_at`, `google_id`) VALUES
+(3, 'Muhammad Awais', 'userokex1@gmail.com', '1', '03007926926', 'Basti roshan din', '2023-02-15 11:13:13', '$2y$10$PztiT7d9klhPaOovzwMJZ.EjYJjbRKBKeKOsO4K54dYv1yYa5.plC', NULL, NULL, NULL, NULL, NULL, NULL, '2023-02-26 06:12:12', '2023-02-26 06:12:12', NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -643,37 +617,37 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `blog_categories`
 --
 ALTER TABLE `blog_categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `blog_posts`
 --
 ALTER TABLE `blog_posts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `carts`
 --
 ALTER TABLE `carts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `contact_us`
 --
 ALTER TABLE `contact_us`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -685,13 +659,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -703,13 +677,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `replies`
 --
 ALTER TABLE `replies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `slider_details`
@@ -733,13 +707,13 @@ ALTER TABLE `subscription_items`
 -- AUTO_INCREMENT for table `testimonials`
 --
 ALTER TABLE `testimonials`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
